@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="../plugins/angularjs/angular.min.js"></script>
+    <script type="text/javascript">
+        //定义模块
+        var app = angular.module("myapp",[]);
+        app.controller("myctrl",function ($scope) {
+            $scope.add=function () {
+                $scope.z = parseInt($scope.x)+parseInt($scope.y);
+            }
+        });
+    </script>
+   <!-- <script type="text/javascript">
+        //定义模块  参数一：模块名 参数二：依赖的其他模块 ，如果没有依赖其他模块，也需要声明空数组
+        var app = angular.module("myapp",[]);
+        //定义控制器  参数一：控制器名称  参数二：控制器做的事情
+        //$scope angularjs内置对象，全局作用域对象  作用：html与js数据交换的桥梁
+        app.controller("myctrl",function ($scope) {
+            //$scope.name="zhangsan";
+            //定义相加的方法
+            $scope.add=function () {
+                $scope.z=parseInt($scope.x)+parseInt($scope.y);
+            }
+        });-->
+    <!--// </script>-->
+</head>
+<body >
+    <!--<div ng-app="myapp" ng-controller="myctrl">
+        &lt;!&ndash;第一个数:<input type="text" ng-model="x"><br>&ndash;&gt;
+        X：<input type="text" ng-model="x"><br>
+        第二个数:<input type="text" ng-model="y"><br>
+        &lt;!&ndash;<button ng-click="add()">相加</button>它们的和是:{{z}}&ndash;&gt;
+        <button ng-click="add()">相加</button> 相加后的结果：{{z}}
+    </div>-->
+    <!--<div ng-app="myapp" ng-controller="myctrl">
+        x:<input type="text" ng-model="x"><br>
+        y:<input type="text" ng-model="y"><br>
+        <button ng-click="add()">和</button>{{z}}
+    </div>-->
+    <div ng-app="myapp" ng-controller="myctrl">
+        X：<input type="text" ng-model="x"><br>
+        Y：<input type="text" ng-model="y"><br>
+        <button ng-click="add()">相加</button> 相加后的结果：{{z}}
+    </div>
+</body>
+</html>

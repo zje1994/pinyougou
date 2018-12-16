@@ -16,6 +16,7 @@
         <module name="pinyougou_sellergoods_interface" />
         <module name="pinyougou_sellergoods_service" />
         <module name="pinyougou_shop_web" />
+        <module name="pinyougou_solr_util" />
         <module name="springDataRedis_Demo" />
       </profile>
     </annotationProcessing>
@@ -31,6 +32,7 @@
       <module name="pinyougou_sellergoods_interface" target="1.7" />
       <module name="pinyougou_sellergoods_service" target="1.7" />
       <module name="pinyougou_shop_web" target="1.7" />
+      <module name="pinyougou_solr_util" target="1.7" />
       <module name="springDataRedis_Demo" target="1.5" />
     </bytecodeTargetLevel>
   </component>
