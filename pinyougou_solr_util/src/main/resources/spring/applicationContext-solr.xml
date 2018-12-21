@@ -13,11 +13,14 @@
 	<!-- solr服务器地址 如果索引仓库使用的是默认值:collection1 url可以不用指定collection1
 			如果不是collection1 必须指定索引库名称
 	-->
-	<solr:solr-server id="solrServer" url="http://127.0.0.1:8080/solr" />
+	<solr:solr-server id="solrServer" url="http://192.168.25.128:8090/solr" />
 
    
 	<!-- solr模板，使用solr模板可对索引库进行CRUD的操作 -->
 	<bean id="solrTemplate" class="org.springframework.data.solr.core.SolrTemplate">
 		<constructor-arg ref="solrServer" />
 	</bean>
+
+	<context:component-scan base-package="com.pinyougou.util"></context:component-scan>
+
 </beans>

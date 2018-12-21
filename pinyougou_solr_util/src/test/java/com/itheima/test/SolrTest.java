@@ -1,6 +1,7 @@
 package com.itheima.test;
 
 import com.pinyougou.pojo.TbItem;
+import com.pinyougou.util.SolrUtil;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -21,7 +22,7 @@ import java.util.List;
  */
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:spring/applicationContext-solr.xml")
+@ContextConfiguration(locations = "classpath*:spring/applicationContext-*.xml")
 public class SolrTest {
 
     @Autowired
@@ -103,4 +104,6 @@ public class SolrTest {
             System.out.println(item.getId()+" ,"+item.getBrand()+" ,"+item.getSeller());
         }
     }
+
+
 }
